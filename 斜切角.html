@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>斜切角</title>
+		<style type="text/css">
+			p {
+				width: 200px;
+				padding: 20px;
+			}
+			.p1 {
+				background: #58a;
+                background: linear-gradient(-45deg, transparent 15px, #58a 0);
+			}
+			.p2 {
+				background: #58a;
+				background: linear-gradient(-45deg, transparent 15px, #58a 0),
+				            linear-gradient(45deg, transparent 15px, #655 0);
+			}
+			.p3 {
+				background: #58a;
+				background: linear-gradient(-45deg, transparent 15px, #58a 0) right,
+				            linear-gradient(45deg, transparent 15px, #655 0) left;
+				background-size: 50% 100%;
+			}
+			.p4 {
+				background: #58a;
+				background: linear-gradient(-45deg, transparent 15px, #58a 0) right,
+				            linear-gradient(45deg, transparent 15px, #655 0) left;
+				background-size: 50% 100%;
+				background-repeat: no-repeat;
+			}
+			.p5 {
+				background: #58a;
+				background: linear-gradient(135deg, transparent 15px, #58a 0) top left,
+				            linear-gradient(-135deg, transparent 15px, #655 0) top right,
+				            linear-gradient(-45deg, transparent 15px, #58a 0) bottom right,
+				            linear-gradient(45deg, transparent 15px, #655 0) bottom left;
+				background-size: 50% 50%;
+				background-repeat: no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="p1">
+			第一个解决方案是万能的CSS渐变。我们假设我们暂时只完成一个斜切角——右下角那个。其诀窍在于渐变可以接受一个角度值作为参数（如45deg），色标位置是绝对长度，这两个都不会因为元素和背景尺寸的改变受到影响。
+		</p>
+		<p class="p2">
+			现在，假设我们需要两个斜切角，左右下角分别一个。只用一个渐变是没办法搞定的，所以两个渐变上场。我们首先想到的可能是：
+		</p>
+		<p class="p3">
+			默认情况下，两个渐变被应用于同一个元素，它们会相爱相杀（彼此掩盖）。我们需要把它们变小，通过使用background-size来让每个渐变都只应用于元素的一半：
+		</p>
+		<p class="p4">
+			即使应用了background-size，这俩渐变还是会把对方盖住。因为我们忘了把background-repeat关掉了，所以我们的背景就都重复了两次。因此，我们的背景还是在相爱相杀——这次是因为背景重复
+		</p>
+		<p class="p5">
+			现在，你应该知道要如何把这个效果应用到其它四个角了吧。一共需要四个渐变
+		</p>
+	</body>
+</html>

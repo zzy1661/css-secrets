@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>平行四边形</title>
+		<style type="text/css">
+			body>div {
+				width: 100px;
+				height: 100px;
+				margin: 20px;
+				background-color: green;
+				color: white;
+				font-weight: bold;
+			}
+			.div1 {
+				transform: skewX(-45deg)
+			}
+			.button { transform: skewX(-45deg); background: gray;display: inline-block;}
+			.button > div { transform: skewX(45deg); }
+			.button2 {
+			    position: relative;
+			    /* text color, paddings, etc. */
+			}
+			.button2::before {
+			    content: ''; /* To generate the box */
+			    position: absolute;
+			    top: 0; right: 0; bottom: 0; left: 0;
+			    z-index: -1;
+			    background: #58a;
+			    transform: skew(-45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			平行四边形
+		</div>
+		<a href="#yolo" class="button">
+		    <div>Click me</div>
+		</a>
+		<hr />
+		<a href="#yolo" class="button2">
+		    click 
+		</a>
+	</body>
+</html>

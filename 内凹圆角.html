@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>内凹圆角</title>
+		<style type="text/css">
+			body > div {
+				width: 200px;
+				margin: 20px;
+			}
+			.something-meaningful {
+			    background: #655;
+			    padding: .8em;
+			}
+			.something-meaningful > div {
+			    background: tan;
+			    border-radius: .8em;
+			    padding: 1em;
+			}
+			.div1 {
+				background: tan;
+				border-radius: .8em;
+				padding: 1em;
+				box-shadow: 0 0 0 .5em #655;
+				outline: .6em solid #655;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="something-meaningful"><div>
+		    I have a nice subtle inner rounding,
+		    don’t I look pretty?
+		</div></div>
+		<div class="div1">
+			 I have a nice subtle inner rounding,
+		    don’t I look pretty?
+		</div>
+	</body>
+</html>

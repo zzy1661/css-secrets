@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多边框</title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				margin: 40px;
+			}
+			.div1 {
+				background: yellowgreen; 
+				box-shadow: 0 0 0 10px #655,0 0 0 15px deeppink,0 2px 5px 15px rgba(0,0,0,.6);
+				border: 3px solid;
+			}
+			.div2 {
+				background: yellowgreen;
+			    border: 10px dashed #655;
+			    outline: 5px dashed deeppink;
+			    outline-offset: -20px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">实线多边框</div>
+		<div class="div2">虚线双边框</div>
+	</body>
+</html>

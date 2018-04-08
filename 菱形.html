@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>菱形</title>
+		<style type="text/css">
+			body {
+				padding: 100px;
+			}
+			
+			div {
+				border: 1px solid;
+			}
+			
+			.picture {
+				width: 230px;
+				transform: rotate(45deg);
+				overflow: hidden;
+				margin-bottom: 100px;
+			}
+			
+			.picture>img {
+				max-width: 100%;
+				transform: rotate(-45deg) scale(1.42);
+			}
+			
+			.img {
+				clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+				transition: 1s clip-path;
+			}
+			
+			.img:hover {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="picture"> <img src="https://www.w3cplus.com/sites/default/files/blogs/2015/1510/css-secrets-18.png" alt="…" /> </div>
+	
+		<img class="img" src="https://www.w3cplus.com/sites/default/files/blogs/2015/1510/css-secrets-18.png" alt="…" />
+	</body>
+
+</html>
