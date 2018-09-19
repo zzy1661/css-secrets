@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>梯形</title>
+		<style type="text/css">
+			.item {
+				width: 100px;
+				height:50px;
+				background: gray;
+				color: white;
+				transform: perspective(.5em) rotateX(5deg);
+				margin: 20px;
+			}
+			.tab {
+			    position: relative;
+			    display: inline-block;
+			    padding: .5em 1em .35em;
+			    color: #ddd;
+			}
+			.tab::before {
+			    content: ''; /* To generate the box */
+			    position: absolute;
+			    top: 0; right: 0; bottom: 0; left: 0;
+			    z-index: -1;
+			    background: #58a;
+			    transform: perspective(.5em) rotateX(5deg);
+			}
+			nav > a {
+			    position: relative;
+			    display: inline-block;
+			    padding: .3em 1em 0;
+			}
+			nav > a::before {
+			    content: '';
+			    position: absolute;
+			    top: 0; right: 0; bottom: 0; left: 0;
+			    z-index: -1;
+			    background: #ccc;
+			    background-image: linear-gradient(
+			    hsla(0,0%,100%,.6),
+			    hsla(0,0%,100%,0));
+			    border: 1px solid rgba(0,0,0,.4);
+			    border-bottom: none;
+			    border-radius: .5em .5em 0 0;
+			    box-shadow: 0 .15em white inset;
+			    transform: perspective(.5em) rotateX(5deg);
+			    transform-origin: bottom;
+			}
+			nav.right-angle > a::before {
+				transform-origin: bottom left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="item">梯形</div>
+		<div class="tab">梯形</div>
+		<nav>
+			<a>home</a>
+			<a>projects</a>
+			<a>about</a>
+		</nav>
+		<nav class="right-angle">
+			<a>home</a>
+			<a>projects</a>
+			<a>about</a>
+		</nav>
+	</body>
+</html>
